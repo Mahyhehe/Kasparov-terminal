@@ -1,0 +1,412 @@
+'use client';
+
+export default function KasparovMacroTerminal() {
+  const installApp = () => {
+    alert(
+      'Pour installer l\'application sur smartphone :\n\n1. Ouvrez le site dans Chrome ou Safari\n\n2. Appuyez sur Partager\n\n3. Ajouter à l\'écran d\'accueil'
+    );
+  };
+
+  const themes = [
+    {
+      title: 'IA Infrastructure',
+      conviction: 'Très forte',
+      color: 'bg-emerald-500',
+      assets: ['NVIDIA', 'Broadcom', 'TSMC', 'AMD'],
+      thesis:
+        'Explosion durable des dépenses IA, data centers et GPU hyperscale.',
+    },
+    {
+      title: 'Énergie & Nucléaire',
+      conviction: 'Forte',
+      color: 'bg-yellow-500',
+      assets: ['Cameco', 'Constellation', 'GE Vernova', 'Oklo'],
+      thesis: 'L\'IA augmente massivement les besoins énergétiques mondiaux.',
+    },
+    {
+      title: 'Crypto Macro',
+      conviction: 'Moyenne/Forte',
+      color: 'bg-orange-500',
+      assets: ['Bitcoin', 'Ethereum'],
+      thesis: 'Institutionnalisation progressive et retour de la liquidité globale.',
+    },
+    {
+      title: 'Second Order Effects',
+      conviction: 'Asymétrique',
+      color: 'bg-cyan-500',
+      assets: ['Vertiv', 'Schneider Electric', 'Arista Networks'],
+      thesis: 'Les conséquences secondaires de l\'IA peuvent surperformer.',
+    },
+  ];
+
+  const marketSignals = [
+    {
+      label: 'FED Liquidity',
+      value: '+2.4%',
+      bullish: true,
+    },
+    {
+      label: 'AI Capex',
+      value: 'Record High',
+      bullish: true,
+    },
+    {
+      label: 'Crypto Fear & Greed',
+      value: '76 / Greed',
+      bullish: true,
+    },
+    {
+      label: 'Volatility Index',
+      value: 'Low',
+      bullish: true,
+    },
+  ];
+
+  const liveOpportunities = [
+    {
+      asset: 'NVIDIA',
+      entry: '$131 - $136',
+      target: '$170+',
+      probability: '82%',
+      catalyst: 'Hyperscaler AI spending',
+    },
+    {
+      asset: 'Bitcoin',
+      entry: '$98k - $103k',
+      target: '$130k+',
+      probability: '74%',
+      catalyst: 'ETF flows & liquidity',
+    },
+    {
+      asset: 'Constellation Energy',
+      entry: 'Pullback buy',
+      target: 'Long-term compounder',
+      probability: '79%',
+      catalyst: 'AI electricity demand',
+    },
+  ];
+
+  const macroRadar = [
+    'FED dovish pivot possible',
+    'AI energy bottleneck accelerating',
+    'Institutional BTC accumulation',
+    'Data center expansion globally',
+    'Nuclear renaissance gaining traction',
+  ];
+
+  const watchlist = [
+    {
+      asset: 'NVIDIA',
+      signal: 'Accumulation institutionnelle',
+      risk: 'Moyen',
+      scenario: 'Dominance IA continue',
+    },
+    {
+      asset: 'Cameco',
+      signal: 'Cycle uranium structurel',
+      risk: 'Moyen',
+      scenario: 'Retour nucléaire mondial',
+    },
+    {
+      asset: 'Bitcoin',
+      signal: 'Flux ETF positifs',
+      risk: 'Élevé',
+      scenario: 'Expansion monétaire',
+    },
+    {
+      asset: 'Vertiv',
+      signal: 'Croissance data centers',
+      risk: 'Moyen',
+      scenario: 'Explosion refroidissement IA',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white p-6">
+      <div className="max-w-7xl mx-auto space-y-8">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 className="text-5xl font-bold tracking-tight">
+              Kasparov Macro Terminal
+            </h1>
+            <p className="text-zinc-400 mt-2 text-lg">
+              Géopolitique • Macro • IA • On-chain • Smart Money
+            </p>
+          </div>
+
+          <div className="flex gap-3 flex-wrap">
+            <button className="px-5 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 transition font-semibold">
+              Scanner Opportunités
+            </button>
+            <button className="px-5 py-3 rounded-2xl bg-zinc-800 hover:bg-zinc-700 transition font-semibold">
+              Risk Engine
+            </button>
+
+            <button
+              onClick={installApp}
+              className="px-5 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold"
+            >
+              Installer sur Smartphone
+            </button>
+          </div>
+        </div>
+
+        <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-3xl font-bold">Live Macro Radar</h2>
+              <p className="text-zinc-400 mt-2">
+                Flux mondiaux et signaux stratégiques en temps réel
+              </p>
+            </div>
+
+            <div className="px-4 py-2 rounded-xl bg-emerald-500 text-black font-bold animate-pulse">
+              LIVE
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {macroRadar.map((item, index) => (
+              <div
+                key={index}
+                className="bg-black border border-zinc-800 rounded-2xl p-4 text-sm text-zinc-300"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+            <p className="text-zinc-400">Liquidité Globale</p>
+            <h2 className="text-3xl font-bold mt-2 text-emerald-400">
+              Risk-On
+            </h2>
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+            <p className="text-zinc-400">Cycle IA</p>
+            <h2 className="text-3xl font-bold mt-2 text-cyan-400">
+              Expansion
+            </h2>
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+            <p className="text-zinc-400">Signal Crypto</p>
+            <h2 className="text-3xl font-bold mt-2 text-orange-400">
+              Bullish
+            </h2>
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+            <p className="text-zinc-400">Volatilité</p>
+            <h2 className="text-3xl font-bold mt-2 text-yellow-400">
+              Contrôlée
+            </h2>
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold mb-5">Thèses Stratégiques</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {themes.map((theme, index) => (
+              <div
+                key={index}
+                className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-zinc-600 transition"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl font-semibold">{theme.title}</h3>
+                  <div
+                    className={`px-3 py-1 rounded-full text-black font-bold ${theme.color}`}
+                  >
+                    {theme.conviction}
+                  </div>
+                </div>
+
+                <p className="text-zinc-400 mt-4 leading-relaxed">
+                  {theme.thesis}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {theme.assets.map((asset) => (
+                    <span
+                      key={asset}
+                      className="px-3 py-2 rounded-xl bg-black border border-zinc-700 text-sm"
+                    >
+                      {asset}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-3xl font-bold">Coups Gagnants Live</h2>
+            <div className="px-4 py-2 rounded-xl bg-cyan-500 text-black font-bold">
+              Smart Flow Engine
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {liveOpportunities.map((trade, index) => (
+              <div
+                key={index}
+                className="bg-black border border-zinc-800 rounded-3xl p-6"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl font-bold">{trade.asset}</h3>
+                  <div className="px-3 py-1 rounded-full bg-emerald-500 text-black font-bold">
+                    {trade.probability}
+                  </div>
+                </div>
+
+                <div className="mt-5 space-y-3 text-zinc-300">
+                  <div>
+                    <p className="text-zinc-500 text-sm">Zone d'entrée</p>
+                    <p className="font-semibold">{trade.entry}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-zinc-500 text-sm">Target</p>
+                    <p className="font-semibold text-emerald-400">
+                      {trade.target}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-zinc-500 text-sm">Catalyseur</p>
+                    <p>{trade.catalyst}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-3xl font-bold">Signaux Macro Temps Réel</h2>
+            <div className="text-emerald-400 font-bold">AI Decision Engine</div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {marketSignals.map((signal, index) => (
+              <div
+                key={index}
+                className="bg-black border border-zinc-800 rounded-2xl p-5"
+              >
+                <p className="text-zinc-500 text-sm">{signal.label}</p>
+                <h3 className="text-2xl font-bold mt-3 text-emerald-400">
+                  {signal.value}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-3xl font-bold">Watchlist Smart Money</h2>
+              <div className="px-4 py-2 rounded-xl bg-emerald-500 text-black font-bold">
+                8 coups d'avance
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {watchlist.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-black rounded-2xl p-5 border border-zinc-800"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                    <div>
+                      <h3 className="text-2xl font-semibold">{item.asset}</h3>
+                      <p className="text-zinc-400 mt-1">{item.signal}</p>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="px-3 py-2 rounded-xl bg-zinc-800 text-sm">
+                        Risque : {item.risk}
+                      </div>
+                      <div className="px-3 py-2 rounded-xl bg-emerald-500 text-black text-sm font-semibold">
+                        {item.scenario}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+            <h2 className="text-3xl font-bold mb-6">Risk Engine</h2>
+
+            <div className="space-y-5">
+              <div>
+                <div className="flex justify-between text-sm mb-2">
+                  <span>Exposition IA</span>
+                  <span>72%</span>
+                </div>
+                <div className="w-full h-3 bg-zinc-800 rounded-full overflow-hidden">
+                  <div className="h-full bg-cyan-400 w-[72%]" />
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between text-sm mb-2">
+                  <span>Énergie</span>
+                  <span>51%</span>
+                </div>
+                <div className="w-full h-3 bg-zinc-800 rounded-full overflow-hidden">
+                  <div className="h-full bg-yellow-400 w-[51%]" />
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between text-sm mb-2">
+                  <span>Crypto</span>
+                  <span>34%</span>
+                </div>
+                <div className="w-full h-3 bg-zinc-800 rounded-full overflow-hidden">
+                  <div className="h-full bg-orange-400 w-[34%]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-black rounded-2xl p-5 border border-zinc-800">
+              <h3 className="font-bold text-xl mb-3">Signal Macro Global</h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Les flux de capitaux restent orientés vers l'IA, l'énergie et les infrastructures critiques.
+                Le marché privilégie les actifs dominants avec forte génération de cash.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl p-8 text-black">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+            <div>
+              <h2 className="text-4xl font-bold">
+                Coup stratégique du moment
+              </h2>
+              <p className="mt-3 text-lg max-w-3xl">
+                Le marché valorise encore insuffisamment les infrastructures énergétiques nécessaires à l'explosion de l'IA.
+                Les leaders de l'électricité, du refroidissement et des réseaux peuvent devenir les gagnants cachés du cycle.
+              </p>
+            </div>
+
+            <button className="bg-black text-white px-6 py-4 rounded-2xl font-bold hover:bg-zinc-900 transition whitespace-nowrap">
+              Déployer Capital
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
