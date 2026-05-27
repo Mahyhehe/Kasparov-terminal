@@ -1,5 +1,3 @@
-'use client';
-
 export default function KasparovMacroTerminal() {
   const installApp = () => {
     alert(
